@@ -1,0 +1,11 @@
+@import url(../../node_modules/normalize.css/normalize.css);
+body {
+  background-color: white;
+  color: #222;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0; }
+
+header ul li {
+  display: inline-block; }
