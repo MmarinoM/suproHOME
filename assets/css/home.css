@@ -61,6 +61,8 @@
     height: 300px; }
     .highlight3 div p, .highlight3 div h2, .highlight3 div a {
       margin-left: 40px; }
+  .highlight3 .hairBand:hover {
+    background-image: url(../img/home/banner_h1_1.jpg); }
   .highlight3 .hairBand {
     background-image: url(../img/home/banner_h1_1.jpg);
     background-position: right;
@@ -175,9 +177,12 @@
   .category li {
     width: 33%;
     font-size: 1rem; }
-  .category a {
-    text-decoration: none;
-    color: #999; }
+  .category .fontBlack {
+    color: black;
+    text-decoration: none; }
+  .category .fontgrey {
+    color: #999;
+    text-decoration: none; }
 
 .listProduct {
   display: flex;
@@ -357,7 +362,7 @@
       display: flex;
       flex-direction: column;
       order: 1;
-      z-index: 1; }
+      z-index: 2; }
       .topType2 .boxDescription h3 {
         font-size: 3rem; }
   .listProduct .product {
@@ -444,7 +449,8 @@
     flex-direction: row;
     width: 100%; }
     .highlight3 div {
-      width: 33.33%; }
+      width: 33.33%;
+      height: 400px; }
     .highlight3 .hairBand {
       padding: 0; }
       .highlight3 .hairBand p, .highlight3 .hairBand h2, .highlight3 .hairBand a {
@@ -461,12 +467,12 @@
       width: 30%;
       display: flex;
       flex-direction: column;
-      height: 600px;
-      align-self: center; }
+      height: 400px;
+      margin-top: 200px; }
       .topSellers .topType1 h3 {
         width: 70%;
         margin-top: 0;
-        margin-bottom: 50px;
+        margin-bottom: 80px;
         height: 10px;
         font-size: 1.8rem; }
     .topSellers .imageDroiteDesktop img {
@@ -475,6 +481,8 @@
       margin-left: 20%; }
     .topSellers .topType2 {
       width: 60%; }
+      .topSellers .topType2 .boxDescription {
+        background-color: white; }
   .newArrival {
     width: 70%;
     margin: 0 auto; }
@@ -484,10 +492,11 @@
       .newArrival .titreSection .titreBlock {
         width: 30%; }
       .newArrival .titreSection ul {
-        width: 30%;
+        width: 50%;
         align-self: flex-end; }
         .newArrival .titreSection ul li {
-          text-align: right; }
+          text-align: right;
+          min-width: 60px; }
     .newArrival .listProduct .product {
       width: 30%;
       margin-bottom: 80px; }
