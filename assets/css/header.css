@@ -28,6 +28,9 @@ header nav {
         text-decoration: none; }
         header nav .icones li a i {
           color: #3A3D45; }
+        header nav .icones li a i:hover {
+          color: #f68773;
+          transition: 1.5s; }
     header nav .icones .settingIcon {
       display: none; }
 
@@ -65,19 +68,21 @@ header nav {
         margin-bottom: 15px; }
       .open ul li i {
         margin-top: 15px;
-        width: 20%; }
+        width: 20%;
+        cursor: pointer; }
   .open h3, .open p {
     width: 80%;
     margin: 30px auto; }
   .open h3 {
-    margin-top: 100px;
+    margin-top: 80px;
     color: black; }
   .open p {
     color: #999; }
   .open .closeMenu {
     margin-left: 30px;
     margin-top: 20px;
-    color: #999; }
+    color: #999;
+    cursor: pointer; }
 
 @media screen and (min-width: 992px) {
   header {
@@ -86,7 +91,8 @@ header nav {
       display: block; }
     header nav .navigation {
       width: 40%;
-      display: flex; }
+      display: flex;
+      margin-right: 20px; }
       header nav .navigation li {
         margin-right: 12px;
         list-style: none; }
@@ -94,6 +100,9 @@ header nav {
         text-decoration: none;
         color: #3A3D45;
         font-weight: bolder; }
+      header nav .navigation a:hover {
+        padding-bottom: 10px;
+        border-bottom: 3px solid #f68773; }
     header nav .search {
       border: 1px solid #999;
       border-radius: 50px;
@@ -117,7 +126,8 @@ header nav {
       width: 20%;
       display: flex;
       justify-content: flex-end;
-      list-style: none; }
+      list-style: none;
+      padding-left: 20px; }
       header nav .icones li {
         margin-left: 8px; }
         header nav .icones li a {
