@@ -1,7 +1,14 @@
 $color-grey: #999;
 $color-orange: #f68773;
 $color-grey: #999;
-
+$color-black: #222;
+$color-white: white;
+$color-lightgray: #eaeaea;
+$color-blue: #1857f7;
+$color-brown: #945454;
+$color-mattBlue: #70849d;
+$color-beige: #cfa58f;
+$color-pink: #f06292;
 
 
 
@@ -14,11 +21,12 @@ $color-grey: #999;
     width: 100%;
     h2{
         margin-bottom: 0;
+        font-size: 2rem;
     }
     p{
         margin-top: 5px;
         color: $color-grey;
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
 }
 .highlight{
@@ -29,6 +37,8 @@ $color-grey: #999;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    
+    
 }
 
 .mobileNo{
@@ -46,7 +56,13 @@ $color-grey: #999;
         margin: 10px;
         a{
             color: $color-grey;
+            
         }
+        i:hover{
+             color: $color-orange;
+             transition: 1s;
+             
+         }
     }
 }
 
@@ -68,8 +84,13 @@ $color-grey: #999;
         text-decoration: none;
         text-transform: uppercase;
         
-        font-size: 0.8rem;
+        font-size: 1rem;
         border-bottom: 2px solid black;
+    }
+    a:hover{
+        border-bottom: none;
+        color: $color-orange;
+        
     }
 }
 
@@ -77,33 +98,36 @@ $color-grey: #999;
 .highlight3{
     display: flex;
     flex-wrap: wrap;
+
     div{
+        background-color: #D1D4CD;
         width: 100%;
-        
-        height: 300px;
+        height: 320px;
+        background-size: 120%;
+
+
+        transition: background-size 2s ease-in;
+        -moz-transition: background-size 2s ease-in;
+        -ms-transition: background-size 2s ease-in;
+        -o-transition: background-size 2s ease-in;
+        -webkit-transition: background-size 2s ease-in;
+
+
         p, h2, a{
             margin-left: 40px;
             
         }
         
     }
-    .hairBand:hover{
-        background-image: url(../img/home/banner_h1_1.jpg);
-     
-        
-
-        
-        
-    }
+    
     .hairBand{
         background-image: url(../img/home/banner_h1_1.jpg);
         background-position: right;
-        background-size: cover;
+        background-size: 120%;
         padding-left: 40px;
         
         
-        // display: flex;
-        // flex-direction: column;
+
         h2{
             width: 150px;
             margin-top: 0;
@@ -125,10 +149,21 @@ $color-grey: #999;
         }
         
     }
+    div:hover{
+        
+        a{
+            color: $color-orange;
+            border-bottom: none;
+        }
+        
+
+    }
+    
     .studded{
         background-image: url(../img/home/banner_h1_2.jpg);
         background-position: center;
-        background-size: cover;
+        // background-size: cover;
+        background-size: 100%;
         text-align: center;
         h2{
             width: 250px;
@@ -153,11 +188,15 @@ $color-grey: #999;
         }
         
     }
+    .studded:hover{
+        background-size: 120%;
+    }
     .specialPrice{
         background-image: url(../img/home/banner_h1_3.jpg);
         background-position: left;
-        background-size: cover;
+        // background-size: cover;
         text-align: right;
+        background-size: 140%;
         
         h2{
             
@@ -188,12 +227,16 @@ $color-grey: #999;
             
         }
     }
+    .specialPrice:hover{
+        background-size: 160%;
+    }
   
 }
 .topSellers{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    
     .topType1{
         width: 100%;
         margin-top: 40px;
@@ -210,15 +253,25 @@ $color-grey: #999;
             text-decoration: none;
             text-transform: uppercase;
             width: -moz-fit-content;
+            width: fit-content;
             font-size: 0.8rem;
             border-bottom: 2px solid black;
+            &:hover{
+                color: $color-orange;
+                border-bottom: 2px solid $color-white;
+
+            }
         }
         p{
             color: $color-grey;
         }
     }
+    .topType1:hover{
+        color: $color-orange;
+        cursor: pointer;
+    }
     .topType2{
-        width: 100%;
+        
         margin-top: 40px;
         margin-bottom: 80px;
         img{
@@ -233,13 +286,22 @@ $color-grey: #999;
             text-decoration: none;
             text-transform: uppercase;
             width: -moz-fit-content;
+            width: fit-content;
             font-size: 0.8rem;
             border-bottom: 2px solid black;
+            &:hover{
+                color: $color-orange;
+                border-bottom: 2px solid $color-white;
+            }
         }
         p{
             color: $color-grey;
         }
 
+    }
+    .topType2:hover{
+        color: $color-orange;
+        cursor: pointer;
     }
 }
 
@@ -254,10 +316,13 @@ $color-grey: #999;
         
         font-size: 1rem;
     }
-    // a{
-    //     text-decoration: none;
+    a{
+       text-decoration: none;
         
-    // }
+    }
+    a:hover{
+        color: $color-orange;
+    }
     .fontBlack{
         color: black;
         text-decoration: none;
@@ -275,26 +340,43 @@ $color-grey: #999;
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
+    margin-top: 50px;
+    .product:hover{
+        color: $color-orange;
+        cursor: pointer;
+    }
     .product{
         display: flex;
         flex-direction: column;
         width: 45%;
         margin-bottom: 50px;
         
+        .imgBox{
+            max-height: 450px;
+            overflow: hidden;
+        }
         img{
+            
             width: 100%;
+            transition: all 1s ease-out;
+        }
+        img:hover{
+            filter: brightness(70%);
+            transform: scale(1.1);
+            
         }
         h3{
             width: 100%;
         }
         .rankingStars{
-            width: 50%;
+            width: 60%;
             display: flex;
             list-style: none;
             padding-left: 0;
             margin-top: 0;
+            
             li{
-                width: 20%;
+                width: 30%;
                 .orangeStar{
                     color: $color-orange;
                 }
@@ -303,11 +385,26 @@ $color-grey: #999;
                 }
             }
         }
-        p{
-            width: 50%;
-            color: $color-grey;
-            margin-top: 0;
+        .priceGroup{
+            display: flex;
+            .oldPrice{
+                text-decoration: line-through;
+                color: $color-grey;
+            }
+            .newPrice{
+                color: black;
+            }
+            p{
+                // width: 20%;
+                margin-top: 0;
+                margin-right: 10px;
+                color: $color-grey;
+            }
         }
+        .colorProduct{
+            display: none;
+        }
+        
 
     
     }
@@ -317,8 +414,16 @@ $color-grey: #999;
         text-transform: uppercase;
         text-align: center;
         margin: 0 auto;
+        // padding-left: 10px;
+        // padding-right: 10px;
         font-size: 0.8rem;
         border-bottom: 2px solid black;
+        width: -moz-fit-content;
+        width: fit-content;
+        &:hover{
+            color: $color-orange;
+            border-bottom: none;
+        }
     }
 }
 
@@ -326,6 +431,7 @@ $color-grey: #999;
     margin-top: 30px;
     background-image: url(../img/home/deals_image.jpg);
     background-position: center;
+    background-size: cover;
 
     .dealDayInfo{
         display: flex;
@@ -370,6 +476,10 @@ $color-grey: #999;
         width: fit-content;
         width: -moz-fit-content;
         margin-bottom: 70px;
+        &:hover{
+            color: $color-orange;
+            border: none;
+        }
     }
     .prices{
         display: flex;
@@ -423,7 +533,10 @@ $color-grey: #999;
             border-bottom: 2px solid black;
             width: fit-content;
             width: -moz-fit-content;
-            
+            &:hover{
+                color: $color-orange;
+                border: none;
+            }
         }
 
     }
@@ -435,11 +548,17 @@ $color-grey: #999;
         img{
             display: block;
             width: 100%;
+            transition: all 1s ease-out;
+            cursor: pointer;
+            &:hover{
+                filter: brightness(80%);
+            }
         }
         h3{
             width: 100%;
             margin-bottom: 0;
             margin-top: 30px;
+            cursor: pointer;
         }
         a{
             color: black;
@@ -458,6 +577,7 @@ $color-grey: #999;
                 font-weight: bold;
                 margin-right: 20px;
                 margin-bottom: 10px;
+                cursor: pointer;
             }
             .dateNews{
                 margin-bottom: 10px;
@@ -470,9 +590,35 @@ $color-grey: #999;
 
 
 .newsletter{
+  /**********************************************************/
     .inputSubmit{
-        input{
+        display: flex;
+        border-bottom: 0.5px solid $color-grey;
+        margin: 20px auto;
+        width: 100%;
+        height: 40px;
+        color: $color-grey;
+        justify-content: space-between;
+        i{
+            margin-top: 3px;
+        }
+        input[type=text]{
+            height: 20px;
+            border: none;
+            color: $color-grey;
+            margin-left: 20px;
+            font-size: 0.8rem;
+        }
+        a{
             text-decoration: none;
+            margin-left: 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: black;
+            font-size: 0.7rem;
+            text-align: center;
+            width: 20%;
+            
         }
     }
 }
@@ -489,10 +635,16 @@ $color-grey: #999;
         
         img{
             width: 33%;
+            &:hover{
+                opacity: 0.8;
+            }
+            
         }
+    
         .desktopOnly{
             display: none;
         }
+      
 }
 
 
@@ -503,8 +655,11 @@ $color-grey: #999;
 
 @media screen and (min-width: 768px){
   .topType1{
-      display: none;
-  }
+        display: none;
+        
+     }
+  
+    
 
 
   .topType2{
@@ -548,6 +703,11 @@ $color-grey: #999;
       .newsTablet{
           width: 45%;
       }
+      a{
+        width: -moz-fit-content;
+        width: fit-content;
+      }
+
   }
   .newsletter{
       display: flex;
@@ -562,7 +722,7 @@ $color-grey: #999;
           .inputEmail{
               width: 70%;
           }
-          .inputSubmit{
+          .subscribe{
               width: 30%;
           }
       }
@@ -576,10 +736,11 @@ $color-grey: #999;
     display: flex;
     
     img{
-        width: 33%;
+        width: 20%;
     }
     .tabletOnly{
         display: block;
+
     }
 }
 }
@@ -611,13 +772,14 @@ $color-grey: #999;
             }
             p{
                 color: $color-orange;
-                font-size: 1rem;
+                font-size: 1.4rem;
             }
             h1{
-                font-size: 6rem;
+                font-size: 8rem;
                 width: 400px;
                 margin-top: 0;
                 margin-bottom: 30px;
+                
             }
          
         }
@@ -643,19 +805,52 @@ $color-grey: #999;
         display: flex;
         flex-direction: row;
         width: 100%;
+        justify-content: space-between;
+        
         div{
             width: 33.33%;
-            height: 400px;
+            height: 285px;
+            background-size: 100%;
             
 
         }
+
+
+        .studded{
+            background-size: 105%;
+            background-repeat: no-repeat;
+
+            p{
+                margin-left: 0;
+            }
+            a{
+                margin-left: 0;
+            }
+            
+        }
+        .studded:hover{
+            background-size: 125%;
+        }
+
+
+
+
         .hairBand{
+            background-size: 140%;
+            
+            background-repeat: no-repeat;
             padding: 0;
             p, h2, a{
                 margin-left: 40px;
                 padding: 0;
                 
             }
+        }
+        div{
+            background-size: 140%;
+        }
+        div:hover{
+            background-size: 160%;
         }
     }
 
@@ -665,7 +860,7 @@ $color-grey: #999;
         flex-direction: row;
         justify-content: space-between;
         flex-wrap: wrap;
-        width: 70%;
+        width: 80%;
         margin: 0 auto;
         
         .topType1{
@@ -673,7 +868,7 @@ $color-grey: #999;
             display: flex;
             flex-direction: column;
             height: 400px;
-            margin-top: 200px;
+            margin-top: 100px;
             
             
             h3{
@@ -703,14 +898,17 @@ $color-grey: #999;
             
             .boxDescription{
                 background-color: white;
-                
+                h3{
+                    font-size: 5rem;
+                }
             }
+
             
         }
     }
 
     .newArrival{
-        width: 70%;
+        width: 80%;
         margin: 0 auto;
         .titreSection{
             display: flex;
@@ -731,7 +929,7 @@ $color-grey: #999;
         }
         .listProduct{
             .product{
-                width: 30%;
+                width: 31%;
                 margin-bottom: 80px;
             }
             a{
@@ -739,6 +937,22 @@ $color-grey: #999;
                 font-size: 1.2rem;
 
             }
+            .colorProduct{
+                display: flex;
+                .color-blue{
+                
+                    border: 3px solid $color-lightgray;
+                    border-radius: 50%;
+                    color: $color-blue;
+                    margin-right: 3px;
+                }
+                .color-brown{
+                    border: 3px solid $color-lightgray;
+                    border-radius: 50%;
+                    color: $color-brown;
+                }
+            }
+          
         }
     }
         
@@ -770,7 +984,7 @@ $color-grey: #999;
     }
 
     .latestNews{
-        width: 70%;
+        width: 80%;
         margin: 0 auto;
         .titreSection{
             display: flex;
@@ -791,11 +1005,14 @@ $color-grey: #999;
         }
         .news{
             width: 30%;
+            a{
+                width: fit-content;
+            }
         }
     }
 
     .newsletter{
-        width: 70%;
+        width: 80%;
         margin: 0 auto;
     }
 
@@ -803,6 +1020,11 @@ $color-grey: #999;
 
 
     .imageWall{
+        width: 100%;
+        display: flex;
+        img{
+            width: 14.28%;
+        }
         .desktopOnly{
             display: block;
         }

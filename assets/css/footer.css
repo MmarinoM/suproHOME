@@ -27,8 +27,12 @@ footer {
       width: 40%; }
     footer .footBlock1 .language {
       width: 40%; }
+      footer .footBlock1 .language select {
+        color: #999; }
     footer .footBlock1 .currency {
       width: 40%; }
+      footer .footBlock1 .currency select {
+        color: #999; }
   footer .footBlock2 {
     display: flex;
     flex-wrap: wrap;
@@ -72,7 +76,7 @@ footer {
 
 @media screen and (min-width: 992px) {
   footer .footBlock1 {
-    width: 70%;
+    width: 80%;
     margin: 0 auto; }
     footer .footBlock1 .supro {
       margin-top: 25px;
@@ -94,7 +98,7 @@ footer {
   footer .footBlock2 {
     display: flex;
     justify-content: space-between;
-    width: 70%;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 80px;
